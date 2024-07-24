@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>WebApplication1</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="Models\CourseController.cs" />
+      <Compile Remove="Pages\**" />
+      <Compile Remove="Views\Number\OddNumbersView.cshtml.cs" />
+      <Compile Remove="Repository\NumbersRepository.cs" />
+      <Compile Remove="Models\Number.cs" />
+      <Compile Remove="Views\Number\**" />
+      <Compile Remove="Controllers\NumberController.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Views\Student\List.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Pages\**" />
+      <EmbeddedResource Remove="Views\Number\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="Pages\**" />
+      <Content Remove="Views\Number\OddNumbersView.cshtml" />
+      <Content Remove="Views\Number\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Pages\**" />
+      <None Remove="Views\Number\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Number\OddNumber.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Number\OddNumbersView.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.7">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.7" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.7">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+
+</Project>

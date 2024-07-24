@@ -1,0 +1,31 @@
+@{
+    int number = 45;
+
+
+    List<int> oddNumbers = new List<int>();
+
+    for (int i = 1; i <= number; i++)
+    {
+        if (i % 2 != 0)
+        {
+            oddNumbers.Add(i);
+        } 
+    }
+    
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>App School</title>
+</head>
+<body>
+<div>
+    <p>Hello All!</p>
+    @foreach (var n in oddNumbers)
+    {
+    <p>@n</p>
+    }
+</div>
+</body>
+</html>
